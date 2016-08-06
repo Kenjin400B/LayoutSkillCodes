@@ -1,6 +1,7 @@
 
 ;;  hi lite shapes attached to gnd and vdd accordingly
-
+;;  u can mod this code by creating variable findNet=(what net you want to find)
+;; and then run hg() but I use a different function name such as findNet() to give u an idea 
 procedure( hg( )
    cv=geGetWindowCellView()
    vbias=dbFindNetByName( cv "vss")
@@ -17,6 +18,7 @@ procedure( hv( )
 
 
 ;;  assumes you set variable findNet in CIW  to net you want to find such as findNet="GND" 
+;; here you can change the findNet variable in the CIW to whatever u want to hillight any net, well actually select an path or shape connected to that net you have to have VXL initially but you don't need VXL to hilight once the layout was done with VXL.  
 
 findNet="vss"
 procedure( hiNet()
